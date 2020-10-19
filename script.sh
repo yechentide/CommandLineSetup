@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/bin/zsh
+#chsh -s $(which zsh)
 
-chsh -s $(which zsh)
 
+# install Prezto
 rm -fr "${HOME}/.z*"
 
 git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
@@ -11,6 +12,7 @@ for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
   ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
 done
 
+# replace configuration files
 rm -f "${HOME}/.zprezto/runcoms/zpreztorc"
 rm -f "${HOME}/.vimrc"
 rm -f "${HOME}/.tmux.conf"
