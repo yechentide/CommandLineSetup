@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 #chsh -s $(which zsh)
 
 
@@ -21,3 +21,6 @@ cp ./files/vimrc "${HOME}/.vimrc"
 cp ./files/tmux.conf "${HOME}/.tmux.conf"
 
 source ~/.zpreztorc
+
+cd ~
+rm -fr CommandLineSetup
