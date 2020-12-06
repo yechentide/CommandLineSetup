@@ -20,7 +20,7 @@ function fn_install_Prezto() {
 
     cd $HOME
 
-    rm -fr ".zlogin .zlogout .zprezto .zpreztorc .zprofile .zshenv .zshrc"
+    rm -fr ".zlogin .zlogout .zprezto .zpreztorc .zprofile .zshenv .zshrc .zcompdump"
 
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" > /dev/null
 
