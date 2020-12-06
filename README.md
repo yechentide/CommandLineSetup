@@ -15,11 +15,11 @@ git clone https://github.com/yechentide/CommandLineSetup.git
 ### セットアップ(１回目のみ)
 
 ```shell
-zsh ~/CommandLineSetup/commandLineSetup setup
+zsh ~/CommandLineSetup/commandLineSetup.sh setup
 ```
 
 ### アップデート
 
 ```shell
-zsh ~/CommandLineSetup/commandLineSetup update
+zsh ~/CommandLineSetup/commandLineSetup.sh update
 ```
