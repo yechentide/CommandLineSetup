@@ -20,7 +20,7 @@ function fn_install_Prezto() {
 
     cd $HOME
 
-    rm -fr ".zlogin .zlogout .zprezto .zpreztorc .zprofile .zshenv .zshrc .zcompdump"
+    rm -fr .zlogin .zlogout .zprezto .zpreztorc .zprofile .zshenv .zshrc .zcompdump
 
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto" > /dev/null
 
@@ -42,7 +42,7 @@ function fn_replace_configuration_files() {
         echo "zpreztorcファイルを削除"
         rm -f "${HOME}/.zprezto/runcoms/zpreztorc"
         echo "zpreztorcファイルを移動"
-        cp ./files/zpreztorc "${HOME}/.zprezto/runcoms/zpreztorc"
+        cp ~/CommandLineSetup/files/zpreztorc "${HOME}/.zprezto/runcoms/zpreztorc"
         echo "設定を反映"
         source ~/.zpreztorc
     else
@@ -52,12 +52,12 @@ function fn_replace_configuration_files() {
     echo ".vimrcファイルを削除"
     rm -f "${HOME}/.vimrc"
     echo ".vimrcファイルを移動"
-    cp ./files/vimrc "${HOME}/.vimrc"
+    cp ~/CommandLineSetup/files/vimrc "${HOME}/.vimrc"
 
     echo ".tmux.confファイルを削除"
     rm -f "${HOME}/.tmux.conf"
     echo ".tmux.confファイルを移動"
-    cp ./files/tmux.conf "${HOME}/.tmux.conf"
+    cp ~/CommandLineSetup/files/tmux.conf "${HOME}/.tmux.conf"
 
     echo "設定ファイルの入れ替えが完了しました！"
 }
