@@ -30,6 +30,13 @@ function fn_install_Prezto() {
     done
 
     echo "Preztoのインストールが完了しました！"
+    
+    echo "" >> .zshrc
+    echo "# aliases" >> .zshrc
+    echo "alias ll='ls -al'" >> .zshrc
+    echo "alias l='ls -l'" >> .zshrc
+    echo "alias ..='cd ..'" >> .zshrc
+    echo "alias ...='cd ../..'" >> .zshrc
 }
 
 function fn_replace_configuration_files() {
