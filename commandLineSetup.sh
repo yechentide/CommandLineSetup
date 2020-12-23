@@ -37,6 +37,7 @@ function fn_install_Prezto() {
     echo "alias l='ls -l'" >> .zshrc
     echo "alias ..='cd ..'" >> .zshrc
     echo "alias ...='cd ../..'" >> .zshrc
+    source ~/.zshrc
 }
 
 function fn_replace_configuration_files() {
