@@ -1,0 +1,29 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+setopt HIST_IGNORE_DUPS           # 前と重複する行は記録しない
+setopt HIST_IGNORE_ALL_DUPS       # 履歴中の重複行をファイル記録前に無くす
+setopt HIST_IGNORE_SPACE          # 行頭がスペースのコマンドは記録しない
+
+export EDITOR=vim
+
+alias showall255color="seq 0 255 | xargs -I {} printf '\033[38;5;{}m{}'"
+alias ls='ls -G'
+alias ll='ls -l'
+alias la='ls -a'
+alias lla='ls -la'
+alias l='clear && ls -la'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
