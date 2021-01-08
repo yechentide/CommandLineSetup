@@ -47,10 +47,16 @@ function fn_replace_configuration_files() {
     cd $HOME
 
     if [[ -d ".zprezto" ]]; then
+        echo "zshrcファイルを削除"
+        rm -f "${HOME}/.zprezto/runcoms/zshrc"
+        echo "zshrcファイルを移動"
+        cp ~/CommandLineSetup/files/zshrc "${HOME}/.zprezto/runcoms/zshrc"
+
         echo "zpreztorcファイルを削除"
         rm -f "${HOME}/.zprezto/runcoms/zpreztorc"
         echo "zpreztorcファイルを移動"
         cp ~/CommandLineSetup/files/zpreztorc "${HOME}/.zprezto/runcoms/zpreztorc"
+
         echo "設定を反映"
         source ~/.zpreztorc
     else
